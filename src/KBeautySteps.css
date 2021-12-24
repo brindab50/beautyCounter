@@ -1,0 +1,51 @@
+.info-10-step { 
+    padding: 0vh 5vh 5vh 5vh;
+    font-size: 18px;
+    
+    }
+    .tabs {
+      padding: 0vh 5vh 15vh 5vh;
+      margin: auto;
+    /* background: #99ccff;
+     */
+    }
+    
+    .tab-content{
+      /* display: flex; */
+      font-size: 16px;
+      padding: 3%;
+    
+    }
+    
+    .step-details {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+    .step-details-box {
+    width: 30%;
+      border: 1px solid #fa2acd57;
+    }
+    
+    .step-info {
+      display: flex;
+    }
+    
+    .tab-list-item {
+      font-size: 16px;
+    }
+    h4{
+      color: #fa2acd
+    }
+    
+    p{
+      font-size: 14px
+    }
+    
+    img {
+      /* border: 1px solid #ddd; */
+      /* border-radius: 4px; */
+      padding: 5px;
+      /* width: 150px;
+      height: 300px; */
+    }
