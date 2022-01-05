@@ -1,3 +1,17 @@
+// ****** project requirements *******
+// ****** the code should be written in ES6 as much as possible
+// ****** Use the create-react-app generator to start your project.
+// ****** Your app should have one HTML page to render your react-redux application
+// ****** There should be 5 stateless components
+// ****** There should be 3 routes
+// ****** The Application must make use of react-router and proper RESTful routing (should you choose to use react-router v3 please refer to the appropriate docs (Links to an external site.); docs for v4 can be found here (Links to an external site.))
+// ****** Use Redux middleware to respond to and modify state change
+// ****** Make use of async actions and redux-thunk middleware to send data to and receive data from a server
+// ****** Your Rails API should handle the data persistence with a database. You should be using fetch() within your actions to GET and POST data from your API - do not use jQuery methods.
+// ****** Your client-side application should handle the display of data with minimal data manipulation
+
+
+
 import React from 'react';
 import './App.css';
 import { withRouter, Route, Switch } from 'react-router-dom'
@@ -12,66 +26,6 @@ import NavBar from './component/NavBar';
 import * as requests from './requests';
 // import { createCart } from './actionCreators';
 
-
-
-////// jwt auth rails and react 
-////// auto_login route from the backend 
-////// requests to create user 
-////// loginUser 
-////// resp 
-////// request  redux
-////// react router 
-////// connect from redex 
-////// link from react router dom 
-
-
-// app js imports 
-// react - react router - maincontainer - productpagecontainer-
-// skincarecontainer - cart container - cartIndexContainer - userContainer
-// signup form container - navbar  - requests 
-
-// create rails jwt auth controller 
-// set state of user and cart to null 
-// set the token variable to the localstorage token 
-// if token fetch 
-// if auto login validation faied 
-// display errors 
-// else 
-// set the state of the user to the response user and set the cart to 0 
-// create a user function that takes in a user argument 
-// if validation errors display errors 
-// else set state of user to the resp user and set the local storage 
-// token to the resp.token 
-// create a logout function that sets the user state to null 
-// and create a arrow function that removes the token 
-
-
-// app js file renders 
-
-// main container 
-      // - navbar , steps tabs , beauty steps 
-
-// skincare container / best sellers
-    // product component, product card component, redux action creator 
-
-// product page container 
-    // connect from redux - action creator(fetch +  add) cartContainer productTab products 
-
-// cart  container 
-     // connect from redux - link from react router 
-
-// cartIndex Container 
-    // connect from redux - action creators (fetch and close) cart index item 
-
-// user container 
-    // link from react router dom 
-    // connect from redux 
-    // action creators create cart 
-
-// signup container 
-      // link from react router dom 
-      // connect from redux 
-      // create cart from action creatos 
 
 
 
