@@ -1,4 +1,4 @@
-// ******  The code should be written in ES6 as much as possible
+// ****** The code should be written in ES6 as much as possible
 // ******  Use the create-react-app generator to start your project.
 // ******  Follow the instructions on this repo to setup the generator: create-react-app (Links to an external site.)
 // ******  Your app should have one HTML page to render your react-redux application
@@ -21,7 +21,6 @@ import MainContainer from './container/MainContainer';
 import ProductPageContainer from './container/ProductPageContainer.js'
 import SkinCareContainer from './container/SkinCareContainer'
 import NavBar from './component/NavBar';
-import Filter from './component/SearchBar';
 
 
 
@@ -29,7 +28,6 @@ class App extends React.Component {
 
   state = {
     user: null,
-    filter: []
   }
 
   render () {
@@ -37,7 +35,6 @@ class App extends React.Component {
     return (
       <div>
         <NavBar currentUser={this.state.user} logout={this.logout}/>
-        <Filter/> 
         <Switch>
         
           <Route path='/glowup' render={() => <MainContainer currentUser={this.state.user} />} />

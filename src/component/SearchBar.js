@@ -5,7 +5,7 @@ import { fetchProductCategories } from '../actionCreators'
 
 
 class SearchBar extends React.Component {
-  
+
 
   componentDidMount() {
     // debugger
@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
         
       <label>
         <strong>Filter Products:</strong>
-        <select value={this.props.productCategories.filter} onChange={(e)=>this.props.productCategories.updateFilter(e.target.value)}>
+        <select value={this.props.filter} onChange={(e)=> this.props.updateFilter(e.target.value)}>
         <option value="All">All</option>
           <option value="All">Product Categories</option>
           <option value="Tech">Skin Concerns</option>

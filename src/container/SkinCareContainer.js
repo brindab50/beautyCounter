@@ -6,10 +6,10 @@ import ProductCard from '../component/ProductCard'
 import PageButtons from '../component/PageButtons'
 import { nextPageCreator } from '../actionCreators';
 import { previousPageCreator } from '../actionCreators';
-
-
+import SearchBar from '../component/SearchBar'
 
 class SkinCareContainer extends React.Component {
+  
 
 
   componentDidMount() {
@@ -18,8 +18,10 @@ class SkinCareContainer extends React.Component {
     this.props.fetchAllProducts()
   }
 
-
   
+
+
+
   render(){
     const showProducts = this.props.products.slice(this.props.startIndex, this.props.startIndex + 10) 
     const totalPagesFloat = this.props.products.length / 10 || 0
@@ -28,6 +30,7 @@ class SkinCareContainer extends React.Component {
     return(
       <div className='scc-product'>
         <div className='product-show-page'>
+          <SearchBar products={this.props.products} /> 
         {showProducts.map(product=>
           <ProductCard key={product.id} product={product}/>)}
           <PageButtons nextIndex={this.props.nextIndex} previousIndex={this.props.previousIndex} totalPages={totalPages}/>

@@ -18,7 +18,7 @@ class NavBar extends React.Component {
           {/* <img src='../treatment.png' alt='glowup' style={{width: '40px'}}/> */}
           </div>
           <div className="">
-            <a className="nav-bar-glowup" href="/glowup" style={{color: '#fa2acd'}}>GLOW UP</a>
+            <a className="nav-bar-glowup" href="/glowup" style={{color: '#fa2acd'}}>Beauty Counter</a>
           </div>
           <ul className="navbar-nav mr-auto nav-options">
 
@@ -30,8 +30,12 @@ class NavBar extends React.Component {
               </div>
             </div>
           </ul>
+         
         </div>
+
       </nav>
+
+
     )
   }
 
