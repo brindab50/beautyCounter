@@ -11,8 +11,6 @@ class NavBar extends React.Component {
 
     return (
 
-
-
       <nav className="navbar nav-bar navbar-expand-lg navbar-light navbar-fixed-top sticky">
         
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -30,17 +28,10 @@ class NavBar extends React.Component {
               <div className="">
                 <a className='' href="/collections/skincare">Recomended Products</a>
               </div>
-
-           
             </div>
-
           </ul>
-         
         </div>
-
       </nav>
-
-
     )
   }
 

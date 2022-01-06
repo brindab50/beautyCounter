@@ -7,8 +7,6 @@ import { fetchProductCategories } from '../actionCreators'
 class SearchBar extends React.Component {
   
 
-
- 
   componentDidMount() {
     // debugger
     this.props.fetchProductCategories()
@@ -21,20 +19,9 @@ class SearchBar extends React.Component {
     console.log('categories from component', this.props.productCategories)
     return(
         <div>
-
-
-     
       <br/>
-
-        {/* {showProducts.map(product=>
-          <ProductCard key={product.id} product={product}/>)}
-          <PageButtons nextIndex={this.props.nextIndex} previousIndex={this.props.previousIndex} totalPages={totalPages}/> */}
-
-          <br/>
         
-
-
-      {/* <label>
+      <label>
         <strong>Filter Products:</strong>
         <select value={this.props.productCategories.filter} onChange={(e)=>this.props.productCategories.updateFilter(e.target.value)}>
         <option value="All">All</option>
@@ -43,7 +30,7 @@ class SearchBar extends React.Component {
           <option value="Sportswear">Brands</option>
           <option value="Finance">Product Types</option>
         </select>
-      </label> */}
+      </label>
       </div>
     )
   }

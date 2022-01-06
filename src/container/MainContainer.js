@@ -1,18 +1,11 @@
 import React from 'react';
-// import NavBar from '../component/NavBar';
-// import { Link } from 'react-router-dom';
-import '../KBeautySteps.css'
+import '../beautyCounter.css'
 import StepTabs from '../component/StepTabs';
 
 
 
 function MainContainer(props) {
-  // let userName;
-  // if (props.currentUser) {
-  //   userName = props.currentUser['first_name'].toUpperCase();
-  // } else {
-  //   userName = null;
-  // }
+
   return (
     <div>
       <br />
@@ -25,7 +18,6 @@ function MainContainer(props) {
       <h5>
         Skin care is an evolving personal journey and we’re here to guide you along the way.
         </h5>
-      {/* <img src='/kbeautystepscomic.jpg' style={{ width: '60%' }} /> */}
 
       <div className='info-10-step'>
         The 10-Step is more than a routine—it's a lifestyle that has become a global phenomenon.
@@ -70,7 +62,6 @@ function MainContainer(props) {
           <h4>Water Based Cleanser</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../2.png' /> */}
           The second step of the double cleanse. Cleansing twice is recommended by aestheticians and dermatologists  because it helps to thoroughly remove any impurities that can cause breakouts.  Water-based cleansers dissolve the water-based impurities such as dirt and sweat that your oil cleanser didn't pick up.
             </div>
             <br/>
@@ -96,7 +87,6 @@ function MainContainer(props) {
           <h4>Exfoliator</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../3.png' /> */}
           Physical and chemical exfoliation help clean pores and slough off dead skin cells for visibly brighter and smoother skin. Regular exfoliation will also help your other skin care products absorb and work more efficiently!
             </div>
             <br/>
@@ -127,7 +117,6 @@ function MainContainer(props) {
           </h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../4.png' /> */}
           Toners are the ultimate prep product, removing any leftover residue from your cleansers while also repairing your skin’s barrier to effectively absorb the moisturizers that follow. Think of your skin like a sponge—it’s more difficult to rehydrate it when it’s dried up and hardened than when it’s already a bit damp.
             </div>
             <br/>
@@ -155,7 +144,6 @@ function MainContainer(props) {
           <h4>Essence</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../5.png' /> */}
           Essences are lightweight and packed with a concentrated blend of hydrating, anti-aging, and complexion-enhancing ingredients
             </div>
             <br/>
@@ -183,7 +171,6 @@ function MainContainer(props) {
           <h4>Treatments / Ampoules</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../6.png' /> */}
           Boosters, serums, and ampoules are the ultimate skin perfectors. Packed with powerhouse ingredients, they target specific skin concerns such as acne, fine lines, and hyperpigmentation.
             </div>
             <br/>
@@ -210,7 +197,6 @@ function MainContainer(props) {
           <h4>Sheet Mask</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../7.png' /> */}
           If essences are the heart of the Korean skincare routine, sheet masks are the soul. The key to sheet masks is the sheet, which when in prolonged contact with your face allows the skin to fully absorb the nutrients and moisture. Plus, they promote the quiet, meditative ritual of relaxation.
             </div>
             <br/>
@@ -239,7 +225,6 @@ function MainContainer(props) {
           <h4>Eye Cream</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../8.png' /> */}
           The skin around your eyes is the thinnest and most delicate on your face, and regularly using an intensive eye cream can keep dark circles, puffiness, and crow’s-feet at bay. Eye creams are concentrated with beneficial ingredients and formulated to be extra gentle and non-irritating.
             </div>
             <br/>
@@ -265,7 +250,6 @@ function MainContainer(props) {
           <h4>Moisturizer</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../9.png' /> */}
           They come in many forms (emulsion, lotion, gel, cream, and sleeping mask) and seal in moisture to plump up skin and smooth fine lines.
             </div>
             <br/>
@@ -292,7 +276,6 @@ function MainContainer(props) {
           <h4>Sunscreen</h4>
           <br />
           <div className='step-info'>
-            {/* <img src='../10.png' /> */}
           You should always wear sunscreen, even if you’ll be inside most of the day. It’s the easiest and most effective way to prevent premature aging (and skin cancer!). Sunscreen should be your last step so it can shield your skin without being diluted by additional products.
             </div>
             <br/>
