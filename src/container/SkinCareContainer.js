@@ -3,22 +3,11 @@ import '../Product.css';
 import { connect } from 'react-redux'
 import { fetchAllProducts } from '../actionCreators'
 import ProductCard from '../component/ProductCard'
+import PageButtons from '../component/PageButtons'
 import { nextPageCreator } from '../actionCreators';
 import { previousPageCreator } from '../actionCreators';
-// import PageButtons from '../component/PageButtons'
 
 
-
-// skin care container imports
-// connect from redux 
-// fetch from action creators 
-// product card component 
-// next page creetor from action creators 
-// page buttoms 
-//  skin care containers calls a fetch all products function from action creator props 
-// renders products with a start index of 10 
-// total pages 
-// renders a product card 
 
 class SkinCareContainer extends React.Component {
 
@@ -29,7 +18,7 @@ class SkinCareContainer extends React.Component {
     this.props.fetchAllProducts()
   }
 
-  
+
   
   render(){
     const showProducts = this.props.products.slice(this.props.startIndex, this.props.startIndex + 10) 
@@ -41,19 +30,16 @@ class SkinCareContainer extends React.Component {
         <div className='product-show-page'>
         {showProducts.map(product=>
           <ProductCard key={product.id} product={product}/>)}
+          <PageButtons nextIndex={this.props.nextIndex} previousIndex={this.props.previousIndex} totalPages={totalPages}/>
+
           <br/>
-        {/* <PageButtons nextIndex={this.props.nextIndex} previousIndex={this.props.previousIndex} totalPages={totalPages}/> */}
         </div>
-        {/* <div> */}
-        {/* </div> */}
+        
       </div>
     )
   }
 
 }
-
-
-
 
 
 function msp(state) {
@@ -71,6 +57,7 @@ function mdp(dispatch) {
     fetchAllProducts: () => dispatch(fetchAllProducts()),
     nextIndex: () => dispatch(nextPageCreator()),
     previousIndex: () => dispatch(previousPageCreator()) 
+  
   }
 }
 export default connect(msp, mdp)(SkinCareContainer);

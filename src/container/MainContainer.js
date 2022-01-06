@@ -4,42 +4,15 @@ import React from 'react';
 import '../KBeautySteps.css'
 import StepTabs from '../component/StepTabs';
 
-///// prop type 
-
-
-
-// main container imports nav bar 
-
-    // react -link react router - navbar css
-
-
-// link from react router dom 
-// - steps tab
-    // steps tab - prop types - step tab
-
-// create a main container function that takes in users as props sent from app js 
-
-// create a variable for username 
-
-// create a conditional if props.current users
-// username = props.currentuser.firstname 
-// if props user name is euqal to current user first name then upper case it else do nothing 
-// create a div that displays the header and user name 
-// main container displays the steps tab 
-// and all of the steps 
-
-
-
-
 
 
 function MainContainer(props) {
-  let userName;
-  if (props.currentUser) {
-    userName = props.currentUser['first_name'].toUpperCase();
-  } else {
-    userName = null;
-  }
+  // let userName;
+  // if (props.currentUser) {
+  //   userName = props.currentUser['first_name'].toUpperCase();
+  // } else {
+  //   userName = null;
+  // }
   return (
     <div>
       <br />
@@ -47,7 +20,7 @@ function MainContainer(props) {
       <br />
       <h4>
         
-        Get Flawless Skin   {userName}
+        Follow Our 10 step guide to get flawless skin  
       </h4>
       <h5>
         Skin care is an evolving personal journey and we’re here to guide you along the way.

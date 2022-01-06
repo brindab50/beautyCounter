@@ -1,0 +1,108 @@
+body {
+    font-size: 16px;
+  }
+  
+    div.reviewer {
+      display: flex;
+      justify-content: space-between;
+      background: none;
+      padding: 1rem 1rem .5rem 1rem;
+      width: 95%;
+  
+      /* width: 100vh; */
+      /* overflow:hidden; */
+      border: 1px solid #fa2acd36;
+    }
+  
+    div.reviewer-info {
+      display: flex;
+      /* justify-content:; */
+      background: none;
+      width: 20%;
+      padding: 1rem;
+      /* width: 100vh; */
+      /* overflow:hidden; */
+    }
+    
+    .reviewer-review {
+      display: flex;
+      background: none;
+      width: 80%;
+      padding: 1rem;
+    }
+  
+    div.review-form {
+      display: flex;
+      width: 100%;
+      border: 1px solid #fa2acd36;
+      padding: 1rem 1rem .5rem 1rem;
+    }
+  
+    .review-form {
+      display: flex;
+      width: 100%;
+      border: 1px solid #fa2acd36;
+    }
+  
+    div.review {
+      display: flex;
+      justify-content: right;
+      overflow:hidden;
+    }
+  
+    textarea.write-review {
+      width: 80vh;
+      height: 10vh;
+      text-align: top;
+      font-size: 16px;
+      color: #fa2acd;
+      resize:none;
+      border: 1px solid #fa2acd86;
+    }
+    
+    label {
+      display: flex;
+      /* align: center; */
+      /* margin-bottom: 0rem */
+    }
+  
+    button:hover {
+      background: #fa2acd;
+      color: #fff;
+    }
+  
+    /* button:focus {
+      outline: none;
+      transform: scale(1.1);
+    } */
+  
+    button.review-update-btn {
+      font-size: 10px;
+      width: 7vh;
+    }
+  
+  
+    /* button.review-update-btn:focus {
+      outline: none;
+      transform: scale(1.1);
+    } */
+  
+    textarea.review-update {
+      display: flex;
+      width: 100%;
+      justify-content: right;
+      padding: 1rem;
+      font-size: 14px;
+      color: #fa2acd;
+      resize:none;
+      border: 1px solid #fa2acd36;
+    }
+  
+  .text-reviewer-review {
+      display: flex;
+      /* justify-content: center; */
+      background: none;
+      width: 80%;
+      padding: 1rem;
+    }
+  
