@@ -3,6 +3,8 @@ import React from 'react'
 class PageButtons extends React.Component {
   constructor(props) {
     super(props);
+
+    
     this.state = {
       pageNumber: 1
     }
@@ -26,8 +28,8 @@ class PageButtons extends React.Component {
 
   render() {
 
-    console.log('current page number', this.state.pageNumber)
-    console.log('totalpages', this.props.totalPages)
+    // console.log('current page number', this.state.pageNumber)
+    // console.log('totalpages', this.props.totalPages)
     let nextButtonDisable = false;
     if (this.state.pageNumber >= this.props.totalPages) {
       nextButtonDisable = true;

@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class ProductTab extends Component {
-  static propTypes = {
-    activeTab: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired,
-  };
+
 
   onClick = () => {
     const { label, onClick } = this.props;
@@ -14,13 +9,7 @@ class ProductTab extends Component {
   }
 
   render() {
-    const {
-      onClick,
-      props: {
-        activeTab,
-        label,
-      },
-    } = this;
+    const {onClick, props: { activeTab, label}} = this;
 
     let className = 'tab-list-item';
 
@@ -38,5 +27,6 @@ class ProductTab extends Component {
     );
   }
 }
+
 
 export default ProductTab;

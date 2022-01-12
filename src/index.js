@@ -10,9 +10,13 @@ import reducer from './reducer'
 
 let defaultState = {
   products: [],
+  reviews: [],
+  review: [],
+  steps: [],
   startIndex: 0,
   product: null,
-  productCategories: []
+  productCategories: [],
+  searchTerm: ''
 
 
 

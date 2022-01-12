@@ -13,6 +13,20 @@
 
 
 
+// ____________________________
+
+
+
+
+
+// create react app was used to start the project 
+// application has 5 or more statless components 
+// application has 3 routes 
+// application makes use of react router 
+// redux is used to respond or modify state changes 
+// thunk middleware is used to respond make async actions to recieve data from endpoint 
+// rails endpoint handles data persistence with a db
+// frontend application handles display of data with minimal data manipulation 
 
 import React from 'react';
 import './App.css';
@@ -23,25 +37,22 @@ import SkinCareContainer from './container/SkinCareContainer'
 import NavBar from './component/NavBar';
 
 
-
 class App extends React.Component {
 
-  state = {
-    user: null,
-  }
+
 
   render () {
     // debugger
+  
     return (
       <div>
-        <NavBar currentUser={this.state.user} logout={this.logout}/>
+        <NavBar />
         <Switch>
-        
-          <Route path='/glowup' render={() => <MainContainer currentUser={this.state.user} />} />
-          <Route exact path='/collections/skincare' render={() => <SkinCareContainer />} />
+          <Route path='/glowup' render={() => <MainContainer />} />
+          <Route exact path='/collections/skincare' render={() => <SkinCareContainer    />} />
+
           <Route path='/collections/skincare/products/:productName' render={() => <ProductPageContainer />} />
-          <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props} currentUser={this.state.user} currentCart={this.state.cart} />} />
-          {/* <Route path='/collections/skincare/:productId' component={ProductPageContainer} currentUser={this.state.user}/> */}
+          <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props}   />} />
         </Switch>
       </div>
     );

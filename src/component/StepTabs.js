@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import StepTab from './StepTab';
 
 class StepTabs extends Component {
-  static propTypes = {
-    children: PropTypes.instanceOf(Array).isRequired,
-  }
+
+
+// props recieved from main container 
+// create a constructor to set initial state pass props as an argument 
+// 
+
 
   constructor(props) {
     super(props);
 
+console.log("jk bkjnj", this.props.children[0].props.children)
     this.state = {
       activeTab: this.props.children[0].props.label,
     };
@@ -20,36 +23,28 @@ class StepTabs extends Component {
   }
 
   render() {
-    const {
-      onClickTabItem,
-      props: {
-        children,
-      },
-      state: {
-        activeTab,
-      }
-    } = this;
+
 
     return (
       <div className="tabs">
         <ol className="tab-list">
-          {children.map((child) => {
+          {this.props.children.map((child) => {
             const { label } = child.props;
 
             return (
               <StepTab
-                activeTab={activeTab}
+               activeTab={this.state.activeTab}
                 key={label}
                 label={label}
-                onClick={onClickTabItem}
+                onClick={this.onClickTabItem}
               />
             );
           })}
         </ol>
         <div className="tab-content">
-          {children.map((child) => {
-            if (child.props.label !== activeTab) return undefined;
-            return child.props.children;
+          {this.props.children.map((child) => {
+            if (child.props.label !== this.state.activeTab) return undefined;
+            return child.props.children; 
           })}
         </div>
       </div>

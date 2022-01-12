@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import ProductTab from './ProductTab';
 
 class ProductTabs extends Component {
-  static propTypes = {
-    children: PropTypes.instanceOf(Array).isRequired,
-  }
+
 
   constructor(props) {
     super(props);
-
     this.state = {
       activeTab: this.props.children[0].props.label,
     };
@@ -20,15 +16,7 @@ class ProductTabs extends Component {
   }
 
   render() {
-    const {
-      onClickTabItem,
-      props: {
-        children,
-      },
-      state: {
-        activeTab,
-      }
-    } = this;
+    const {onClickTabItem, props: { children }, state: {activeTab }} = this;
 
     return (
       <div className="tabs">

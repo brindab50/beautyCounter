@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { fetchProduct} from '../actionCreators'
 import ProductTabs from '../component/ProductTabs';
+import Review from '../component/Review';
+
 import '../Product.css';
 require('../style.css');
 
@@ -17,9 +19,11 @@ class ProductPageContainer extends React.Component {
  
 
   render() {
-    console.log('props in ppc', this.props)
+    // console.log('props in ppc', this.props)
 
-    if(!this.props.product) return null;
+    if(!this.props.product)  
+      return <div>Loading...</div>
+  
     return (
       <div>
         <div className='ppc-product-info'>
@@ -45,6 +49,8 @@ class ProductPageContainer extends React.Component {
                 {this.props.product.ingredients}
               </div>
             </ProductTabs>
+            <Review product={this.props.product} key={this.props.product.id}/>
+
           </div>        
         </div>
       </div>
@@ -54,13 +60,18 @@ class ProductPageContainer extends React.Component {
         <div>
        
         </div>
+
       </div>
+
+
     )
   }
 }
 
 function msp(state, ownProps) {
   // console.log('MSP PRODUCT PAGE CONTAINER', state)
+    // console.log('MSP PRODUCT PAGE CONTAINER', ownProps.match.params.productId)
+
   const productId = ownProps.match.params.productId;
   const product = state.product;
  
@@ -80,3 +91,5 @@ function mdp(dispatch) {
   }
 }
 export default connect(msp, mdp)(ProductPageContainer);
+
+// export default connect(state => ({ productId: ownProps.match.params, product: state.product }), { fetchProduct(id) })(ProductPageContainer);

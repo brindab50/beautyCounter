@@ -13,11 +13,23 @@ let reducer = (state, action) => {
       return { ...state, startIndex: previousIndex }
     default:
       return state
-    case 'FETCH PRODUCT CATEGORIES':
-      return { ...state, productCategories: action.payload }
-
+    case 'FETCH ALL STEPS':
+      return { ...state, products: action.payload }
+      case 'FETCH REVIEWS':
+        return { ...state, reviews: action.payload }
+      case 'POST REVIEW':
+      const review = action.payload.review
+      const reviews = [...state.reviews, review]
+      debugger
+      return {
+        ...state, review, reviews
+      }
+     
+  
   }
 
 }
 
 export default reducer;
+
+

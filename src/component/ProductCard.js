@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom'
 
 const ProductCard = (props) => {
 
-  console.log('props card', props)
+  // console.log('props card', props)
   return (
-    // <Link to={`${props.product.link}`}>
     <Link to={`/collections/skincare/${props.product.id}`}>
     <div className='product-card'>
       <img src={props.product.img_url} className='product-card-pic' alt={props.product.name}/>

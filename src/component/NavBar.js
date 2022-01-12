@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
 import '../NavBar.css'
 
 
@@ -15,7 +13,6 @@ class NavBar extends React.Component {
         
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <div>
-          {/* <img src='../treatment.png' alt='glowup' style={{width: '40px'}}/> */}
           </div>
           <div className="">
             <a className="nav-bar-glowup" href="/glowup" style={{color: '#fa2acd'}}>Beauty Counter</a>

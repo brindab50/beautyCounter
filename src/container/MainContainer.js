@@ -1,4 +1,5 @@
 import React from 'react';
+
 import '../beautyCounter.css'
 import StepTabs from '../component/StepTabs';
 
@@ -21,7 +22,9 @@ function MainContainer(props) {
 
       <div className='info-10-step'>
         The 10-Step is more than a routine—it's a lifestyle that has become a global phenomenon.
+        visit our blog to read more 
           </div>
+          <a href="https://deardiaryblogs.com/2021/07/21/flawless-glass-skin/">Read More About It On Our Blog</a>
 
 <hr/>
 <br/>
@@ -32,7 +35,6 @@ function MainContainer(props) {
           <br />
             <div>
           <div className='step-info'>
-            <img src='../1.png' />
           Oil cleansers are the base of the Korean skin care routine and the first step of the double cleanse. They're not only relaxing to use; as you gently massage these cleansers in, they also remove makeup and draw out other oil-based impurities, such as sebum, SPF, and pollution.
 
             </div>
@@ -304,3 +306,54 @@ function MainContainer(props) {
 }
 
 export default MainContainer;
+
+
+
+
+// import React from 'react';
+// import { connect } from 'react-redux'
+// import { fetchAllSteps } from '../actionCreators'
+
+
+// class MainContainer extends React.Component {
+
+
+//   componentDidMount() {
+    
+//     this.props.fetchAllSteps()
+//   }
+
+
+//   render(){
+   
+//    return(
+//       <div >
+  // {this.props.steps.map(step =>
+  // <StepTabs key={step.id} step={step} />)}
+
+       
+//       </div>
+//    )
+//   }
+   
+
+// }
+
+
+// function msp(state) {
+//   // console.log('mspp', state)
+//   return {
+//     steps: state.steps,
+
+//   }
+// }
+
+// function mdp(dispatch) {
+//   // console.log('mdppppp', dispatch)
+//   return { 
+//     fetchAllSteps: () => dispatch(fetchAllSteps()),
+
+  
+//   }
+// }
+// export default connect(msp, mdp)(MainContainer);
