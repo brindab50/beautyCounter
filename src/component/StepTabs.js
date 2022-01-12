@@ -4,9 +4,19 @@ import StepTab from './StepTab';
 class StepTabs extends Component {
 
 
-// props recieved from main container 
-// create a constructor to set initial state pass props as an argument 
-// 
+// recieving props from main container 
+// using constructor to recieve the props and 
+// creating a click handler and passing it the argument of a tab 
+// creating this click handler to pass it down in to an event so each 
+// time a tab is clicked it sets the active tab state to the tab that was clicked 
+// setting the state of active tab to the props that were recieved 
+// iterating through the array of numbered tabs 
+// iterate through the array of the props lable tabs 
+// on each tab iterate through the lable childeren props and 
+// return the childern props of the lable
+
+
+
 
 
   constructor(props) {

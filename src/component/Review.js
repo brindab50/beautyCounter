@@ -54,10 +54,10 @@ class Review extends React.Component {
           <textarea className='write-review' value={this.state.review} type='textarea' name="review" placeholder='Review' onChange={this.changeHandler('review')} />
           <br />
           <button>Submit</button>
-          <hr />
+        
         </form>
 
-        
+
 
         <ReviewsComponent />
       </div>
@@ -75,8 +75,11 @@ function msp(state) {
 }
 
 function mdp(dispatch) {
-  return { postReview: (review) => dispatch(postReview(review)) }
+  return { 
+    postReview: (review) => dispatch(postReview(review))
 
+  }
+  
 }
 
 export default connect(msp, mdp)(Review)

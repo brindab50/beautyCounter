@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 
+
+
+// create a function onclick function 
+// 
+
+
 class StepTab extends Component {
   onClick = () => {
-    const { label, onClick } = this.props;
-    onClick(label);
+    // const { label, onClick } = this.props;
+    this.props.onClick(this.props.label);
   }
 
   render() {

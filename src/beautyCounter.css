@@ -42,10 +42,7 @@
       font-size: 14px
     }
     
-    img {
-      /* border: 1px solid #ddd; */
-      /* border-radius: 4px; */
-      padding: 5px;
-      /* width: 150px;
-      height: 300px; */
-    }
+    .body {
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBO8HdlrLNNY2E5R9tdgUkrpoUfCFQfw1iYg&usqp=CAU");
+      background-color: #cccccc;
+     }

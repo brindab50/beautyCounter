@@ -5,7 +5,9 @@ import StepTabs from '../component/StepTabs';
 
 
 
-function MainContainer(props) {
+// importing setp tabs component and passing each step div to it 
+
+function MainContainer() {
 
   return (
     <div>

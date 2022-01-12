@@ -1,11 +1,6 @@
 
 const headers = {'Content-Type': 'application/json', 'Accepts': 'application/json'}
-const parseData = response => response.json();
 const url = "http://localhost:3000"
-export const nextPageCreator = () => ( {type: 'NEXT_PAGE'} )
-export const previousPageCreator = () => ( {type: 'PREVIOUS_PAGE'} )
-
-
 
 
 export const fetchAllProducts = () => dispatch => {
@@ -43,6 +38,20 @@ export const fetchReviews = (productId) => dispatch => {
   .then(data => {
   //  console.log('fetchreview action', data)
     dispatch({type: 'FETCH REVIEWS', payload: data})
+  })
+}
+export const deleteReview = (reviewId) => dispatch => {
+  // debugger
+  fetch(`${url}/reviews/${reviewId}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({reviewId})
+  }).then(res => res.json())
+  .then(data => {
+    dispatch({type: 'DELETE REVIEW', payload: data})
   })
 }
 

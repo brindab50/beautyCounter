@@ -56,7 +56,7 @@ class ProductPageContainer extends React.Component {
       </div>
       
 
-      <hr></hr>
+    
         <div>
        
         </div>

@@ -15,9 +15,12 @@ let reducer = (state, action) => {
       return state
     case 'FETCH ALL STEPS':
       return { ...state, products: action.payload }
-      case 'FETCH REVIEWS':
+    case 'FETCH REVIEWS':
         return { ...state, reviews: action.payload }
-      case 'POST REVIEW':
+    case 'DELETE REVIEW':
+      return { ...state, reviews: state.reviews.filter(review => review.id !== action.payload.review.id) }
+      // return { ...state, reviews}
+    case 'POST REVIEW':
       const review = action.payload.review
       const reviews = [...state.reviews, review]
       debugger
