@@ -13,9 +13,7 @@ class ReviewsComponent extends React.Component {
 
   render() {
 
-    let productReviews = this.props.reviews.filter(review => review.product_id === this.props.product.id)
-    console.log("bbb", productReviews)
-
+   let productReviews = this.props.reviews.filter(review => review.product_id === this.props.product.id)
    let x = productReviews.map(review => <ReviewCard deleteReview={this.props.deleteReview}
     review={review} key={review.id}/> )
     return (
@@ -29,12 +27,6 @@ class ReviewsComponent extends React.Component {
   }
 
 }
-
-
-
-
-
-
 function msp(state) {
   // debugger
 console.log('msp', state)

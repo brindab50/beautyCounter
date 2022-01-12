@@ -33,7 +33,7 @@ class Review extends React.Component {
         const review = Object.assign({}, this.state)
         console.log(review)
         this.props.postReview(review)
-        this.reviewForm.value = ''
+        this.reviewForm.textarea = ''
     }
     
   
@@ -41,10 +41,6 @@ class Review extends React.Component {
     
     
   render() {
-    // console.log("test", this.props.product.id)
-    // console.log("jnjn", this.state)
-    // console.log("vbbbb", this.props.postReview)
-
     return (
 
       <div>
@@ -71,7 +67,6 @@ class Review extends React.Component {
 
 function msp(state) {
   return {review: state.review}
-
 }
 
 function mdp(dispatch) {
@@ -79,7 +74,5 @@ function mdp(dispatch) {
     postReview: (review) => dispatch(postReview(review))
 
   }
-  
 }
-
 export default connect(msp, mdp)(Review)

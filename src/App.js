@@ -50,7 +50,6 @@ class App extends React.Component {
         <Switch>
           <Route path='/glowup' render={() => <MainContainer />} />
           <Route exact path='/collections/skincare' render={() => <SkinCareContainer    />} />
-
           <Route path='/collections/skincare/products/:productName' render={() => <ProductPageContainer />} />
           <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props}   />} />
         </Switch>
