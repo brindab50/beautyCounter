@@ -23,12 +23,20 @@ class NavBar extends React.Component {
             <div className='nav-bar-center'>
 
               <div className="">
-                <a className='' href="/collections/skincare">Recomended Products</a>
+                <a className='' href="/collections/skincare">Shop All</a>
+
+
+        
+
               </div>
             </div>
+
+           
           </ul>
          
         </div>
+
+       
 
       </nav>
 

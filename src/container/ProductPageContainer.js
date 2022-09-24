@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { fetchProduct} from '../actionCreators'
 import ProductTabs from '../component/ProductTabs';
+import Likes from '../component/Likes';
 import Review from '../component/Review';
 
 import '../Product.css';
@@ -9,7 +10,9 @@ require('../style.css');
 
 class ProductPageContainer extends React.Component {
 
-
+state = {
+  cart: []
+}
 
   componentDidMount() {
     const productId = this.props.match.params.productId;
@@ -17,10 +20,19 @@ class ProductPageContainer extends React.Component {
   }
 
  
+  handleCart = (event) => {
+    // console.log("test3", this.props.product)
+    this.setState({
+      cart: [...this.state.cart, this.props.product]
+    })
+
+  }
+
+
 
   render() {
     // console.log('props in ppc', this.props)
-
+console.log("test3443", this.state.cart.length)
     if(!this.props.product)  
       return <div>Loading...</div>
   
@@ -35,6 +47,9 @@ class ProductPageContainer extends React.Component {
             <h4>{this.props.product.brand}</h4>
             <h5>{this.props.product.name}
               <br />
+
+              <button onClick={this.handleCart}>add to cart</button>
+              <br/>
               ${this.props.product.price}
             </h5>
           <div>
@@ -49,6 +64,7 @@ class ProductPageContainer extends React.Component {
                 {this.props.product.ingredients}
               </div>
             </ProductTabs>
+            <Likes/> 
             <Review product={this.props.product} key={this.props.product.id}/>
 
           </div>        

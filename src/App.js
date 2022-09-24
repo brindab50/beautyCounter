@@ -35,6 +35,7 @@ import MainContainer from './container/MainContainer';
 import ProductPageContainer from './container/ProductPageContainer.js'
 import SkinCareContainer from './container/SkinCareContainer'
 import NavBar from './component/NavBar';
+import Carousel, {CarouselItem} from './container/Carousel';
 
 
 class App extends React.Component {
@@ -45,11 +46,19 @@ class App extends React.Component {
     // debugger
   
     return (
-      <div>
+      <div >
         <NavBar />
+        <div className="App">
+        <Carousel >
+          <CarouselItem> item 1</CarouselItem>
+          <CarouselItem>item 2</CarouselItem>
+          <CarouselItem> item </CarouselItem>
+        
+        </Carousel>
+        </div>
         <Switch>
           <Route path='/glowup' render={() => <MainContainer />} />
-          <Route exact path='/collections/skincare' render={() => <SkinCareContainer    />} />
+          <Route exact path='/collections/skincare' render={() => <SkinCareContainer />} />
           <Route path='/collections/skincare/products/:productName' render={() => <ProductPageContainer />} />
           <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props}   />} />
         </Switch>

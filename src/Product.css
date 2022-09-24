@@ -1,6 +1,7 @@
 body {
     display: flex;
-    background: none;
+    background-color: cream;
+
   }
   
   /* scc product */
@@ -94,6 +95,22 @@ body {
       display:inline-block;
     }
   
+
+    /* button {
+ 
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      
+    } */
     button.add-to-bag-btn {
       background: none;
       border: 1px solid #fa2acd;

@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 const ProductCard = (props) => {
 
+
+
   // console.log('props card', props)
   return (
     <Link to={`/collections/skincare/${props.product.id}`}>
