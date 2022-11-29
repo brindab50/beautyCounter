@@ -1,7 +1,8 @@
 import React from 'react';
 import '../NavBar.css'
 
-
+import { menuItems } from '../menuItems';
+import MenuItems from './MenuItems';
 
 class NavBar extends React.Component {
   render() {
@@ -9,36 +10,24 @@ class NavBar extends React.Component {
 
     return (
 
-      <nav className="navbar nav-bar navbar-expand-lg navbar-light navbar-fixed-top sticky">
-        
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <div>
-          </div>
-          <div className="">
-            <a className="nav-bar-glowup" href="/glowup" style={{color: '#fa2acd'}}>Beauty Counter</a>
-          </div>
-          <ul className="navbar-nav mr-auto nav-options">
+      <nav>
+      <ul className="menus">
+        {menuItems.map((menu, index) => {
+          const depthLevel = 0;
+          return (
+            <MenuItems
+              items={menu}
+              key={index}
+              depthLevel={depthLevel}
+            />
+            
+          );
+        })}
+      </ul>
 
-
-            <div className='nav-bar-center'>
-
-              <div className="">
-                <a className='' href="/collections/skincare">Shop All</a>
-
-
-        
-
-              </div>
-            </div>
-
-           
-          </ul>
-         
-        </div>
-
-       
-
-      </nav>
+      
+  
+    </nav>
 
 
     )

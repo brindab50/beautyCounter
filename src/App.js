@@ -28,7 +28,7 @@
 // rails endpoint handles data persistence with a db
 // frontend application handles display of data with minimal data manipulation 
 
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import { withRouter, Route, Switch } from 'react-router-dom'
 import MainContainer from './container/MainContainer';
@@ -36,36 +36,46 @@ import ProductPageContainer from './container/ProductPageContainer.js'
 import SkinCareContainer from './container/SkinCareContainer'
 import NavBar from './component/NavBar';
 import Carousel, {CarouselItem} from './container/Carousel';
+import Header from './component/Header';
+import Cart from './component/Cart';
+import FrontPage from './component/FrontPage';
+import Skincare from './component/Skincare';
 
 
-class App extends React.Component {
 
-
-
-  render () {
-    // debugger
+function App() {
   
+
+
     return (
       <div >
-        <NavBar />
+     
+        <Header />
         <div className="App">
-        <Carousel >
+        {/* <Carousel >
           <CarouselItem> item 1</CarouselItem>
           <CarouselItem>item 2</CarouselItem>
           <CarouselItem> item </CarouselItem>
         
-        </Carousel>
+        </Carousel> */}
         </div>
+        {/* <Skincare/> */}
         <Switch>
           <Route path='/glowup' render={() => <MainContainer />} />
+          <Route path='/cart' render={() => <Cart />} />
+          <Route path='/frontPage' render={() => <FrontPage />} />
+          <Route path='/skincare' render={() => <Skincare />} />
+
+
+
+
           <Route exact path='/collections/skincare' render={() => <SkinCareContainer />} />
-          <Route path='/collections/skincare/products/:productName' render={() => <ProductPageContainer />} />
-          <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props}   />} />
+          <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props}     />} />
         </Switch>
       </div>
     );
   }
-}
+
 
 export default withRouter(App);
   

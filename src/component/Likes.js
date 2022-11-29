@@ -10,6 +10,7 @@ class Likes extends React.Component{
 
     
     handleClick = () => {
+       
         this.setState({
             likes: this.state.likes + 1 
         })

@@ -26,9 +26,13 @@ class SkinCareContainer extends React.Component {
     const showProducts = this.props.products.filter(p =>
       p.detail.toLowerCase().includes(this.state.searchTerm)
     )
+
+
+    // const skincare = this.props.products.filter(p => p.product_type === this.props.products.product_type)
+
+
     
     return(
-      
       <div className='scc-product'>
         <div className='product-show-page'>
         <Search onChange={this.handleSearchChange}/>

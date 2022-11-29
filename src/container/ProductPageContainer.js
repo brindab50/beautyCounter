@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { fetchProduct} from '../actionCreators'
 import ProductTabs from '../component/ProductTabs';
-import Likes from '../component/Likes';
+// import Like from '../component/'
 import Review from '../component/Review';
 
 import '../Product.css';
@@ -33,6 +33,7 @@ state = {
   render() {
     // console.log('props in ppc', this.props)
 console.log("test3443", this.state.cart.length)
+// console.log(this.props.product.product_type)
     if(!this.props.product)  
       return <div>Loading...</div>
   
@@ -47,11 +48,12 @@ console.log("test3443", this.state.cart.length)
             <h4>{this.props.product.brand}</h4>
             <h5>{this.props.product.name}
               <br />
-
-              <button onClick={this.handleCart}>add to cart</button>
-              <br/>
               ${this.props.product.price}
+              <br/>
             </h5>
+
+            <button onClick={this.handleCart}>add to cart</button>
+              <br/>
           <div>
             <ProductTabs>
               <div label="Details">
@@ -64,7 +66,9 @@ console.log("test3443", this.state.cart.length)
                 {this.props.product.ingredients}
               </div>
             </ProductTabs>
-            <Likes/> 
+
+          
+            {/* <Like product={this.props.product} key={this.props.product.id} /> */}
             <Review product={this.props.product} key={this.props.product.id}/>
 
           </div>        

@@ -20,7 +20,7 @@ let reducer = (state, action) => {
     case 'DELETE REVIEW':
       return { ...state, reviews: state.reviews.filter(review => review.id !== action.payload.review.id) }
       // return { ...state, reviews}
-    case 'POST REVIEW':
+    case 'REVIEW':
       const review = action.payload.review
       const reviews = [...state.reviews, review]
       debugger

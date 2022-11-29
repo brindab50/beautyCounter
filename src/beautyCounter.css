@@ -24,7 +24,7 @@
     
     .step-details-box {
     width: 30%;
-      border: 1px solid #fa2acd57;
+      border: 10px solid #c5c5c557;
     }
     
     .step-info {
@@ -35,7 +35,7 @@
       font-size: 16px;
     }
     h4{
-      color: #fa2acd
+      color: rgb(155, 154, 154)
     }
     
     p{
@@ -46,3 +46,14 @@
       background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBO8HdlrLNNY2E5R9tdgUkrpoUfCFQfw1iYg&usqp=CAU");
       background-color: #cccccc;
      }
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(116, 105, 105);
+  color: white;
+  text-align: center;
+}
