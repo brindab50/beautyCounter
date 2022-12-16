@@ -3,12 +3,13 @@ import React from "react";
 import { connect } from 'react-redux'
 import { fetchAllProducts } from '../actionCreators'
 import { render } from "@testing-library/react";
+import ProductCard from "./ProductCard";
 
 
 
 
 
-class Skincare extends React.Component{
+class EyeCare extends React.Component{
 
 
 
@@ -20,11 +21,20 @@ class Skincare extends React.Component{
       
     
     render(){
+    const eyeCreams = this.props.products.filter(p => p.product_type.name == "eye cream" )
 
-        // console.log(this.props.products.filter(p => p.p === ))
         return(
             <div>
-              <h1>skincare</h1>
+                
+
+              <div className='scc-product'>
+        <div className='product-show-page'>
+        {eyeCreams.map(product=>
+          <ProductCard key={product.id} product={product} />)}
+          <br/>
+        </div>
+        
+      </div>
             </div>
         )
     }
@@ -45,4 +55,4 @@ function msp(state) {
     }
   }
 
-export default connect(msp, mdp)(Skincare)
+export default connect(msp, mdp)(EyeCare)

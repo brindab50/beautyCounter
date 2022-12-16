@@ -20,12 +20,12 @@ state = {
   }
 
  
-  handleCart = (event) => {
-    // console.log("test3", this.props.product)
+  handleCart = (id) => {
+    console.log("ppp", this.state.cart)
     this.setState({
-      cart: [...this.state.cart, this.props.product]
+      cart: this.props.product
     })
-
+  
   }
 
 
@@ -34,6 +34,7 @@ state = {
     // console.log('props in ppc', this.props)
 console.log("test3443", this.state.cart.length)
 // console.log(this.props.product.product_type)
+console.log("test44", this.state.cart)
     if(!this.props.product)  
       return <div>Loading...</div>
   

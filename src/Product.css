@@ -113,7 +113,7 @@ body {
     } */
     button.add-to-bag-btn {
       background: none;
-      border: 1px solid #fa2acd;
+      border: 1px solid #5afa2a;
       border-radius: 0px;
       color: #000;
       display: block;
@@ -124,23 +124,23 @@ body {
     }
   
     button.add-to-bag-btn:hover {
-      background: #fa2acd;
+      background: #54fa2a;
       color: #fff;
     }
   
     input {
       width: 40vh;
       font-size: 16px;
-      color: #fa2acd;
+      color: #54fa2a;
     }
     
     input:focus {
-      outline: 2px solid #fa2acd86;
+      outline: 2px solid #54fa2a86;
       background-color: none;
     }
   
     textarea:focus {
-      outline: 2px solid #fa2acd86;
+      outline: 2px solid #5afa2a86;
       background-color: none;
     }
     
@@ -150,7 +150,7 @@ body {
     }
     
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #fa2acd65;
+    color: hsla(106, 95%, 57%, 0.396);
       ;
       opacity: 1; /* Firefox */
     }

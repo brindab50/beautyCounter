@@ -1,6 +1,6 @@
 import NavBar from './NavBar';
 import { Link } from 'react-router-dom';
-// import { useState } from 'react';
+// import { useState } from 'react'; 
 
 
 const Header = (props) => {
@@ -9,7 +9,7 @@ const Header = (props) => {
   return (
     <header>
       <div className="nav-area">
-        <Link to="/frontPage" className="logo">
+        <Link to="/glowup" className="logo">
           Secret Potions | SoHo, New York
         </Link>
         <br/> 
@@ -19,7 +19,6 @@ const Header = (props) => {
 
         <NavBar />
        
-
         {/* <Search onChange={props.onChange}/> */}
       </div>
 

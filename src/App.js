@@ -39,8 +39,13 @@ import Carousel, {CarouselItem} from './container/Carousel';
 import Header from './component/Header';
 import Cart from './component/Cart';
 import FrontPage from './component/FrontPage';
-import Skincare from './component/Skincare';
+import Skincare from './component/Treatments';
+import Cleanser from './component/Cleanser';
 
+import WhoWeAre from './component/WhoWeAre';
+import EyeCare from './component/EyeCare';
+import Moisturizer from './component/Moisturizer';
+import Masks from './component/Masks';
 
 
 function App() {
@@ -63,11 +68,13 @@ function App() {
         <Switch>
           <Route path='/glowup' render={() => <MainContainer />} />
           <Route path='/cart' render={() => <Cart />} />
-          <Route path='/frontPage' render={() => <FrontPage />} />
-          <Route path='/skincare' render={() => <Skincare />} />
-
-
-
+          {/* <Route path='/frontPage' render={() => <FrontPage />} /> */}
+          <Route path='/treatments' render={() => <Skincare />} />
+          <Route path='/cleanser' render={() => <Cleanser />} />
+          <Route path='/WhoWeAre' render={() => <WhoWeAre />} />
+          <Route path='/moisturizers' render={() => <Moisturizer />} />
+          <Route path='/eyecare' render={() => <EyeCare />} />
+          <Route path='/masks' render={() => <Masks />} />
 
           <Route exact path='/collections/skincare' render={() => <SkinCareContainer />} />
           <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props}     />} />
@@ -79,3 +86,7 @@ function App() {
 
 export default withRouter(App);
   
+
+// create a menu item for dashboard 
+// with sub menu of 
+// 

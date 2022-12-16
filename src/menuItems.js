@@ -20,12 +20,12 @@ export const menuItems = [
             url: '/',
               submenu: [
           {
-            title: 'Cleanser',
-            url: '/skincare',
+            title: 'Treatments',
+            url: '/treatments',
           },
           {
               title: 'Moisturizer',
-              url: '/moisturizer',
+              url: '/moisturizers',
             },
             {
               title: 'Eyecare',
@@ -128,7 +128,7 @@ export const menuItems = [
          submenu: [
         {
           title: 'Who we are',
-          url: 'who we are',
+          url: 'WhoWeAre',
         },
         {
           title: 'Our values',
