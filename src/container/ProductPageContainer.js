@@ -54,6 +54,7 @@ console.log("test44", this.state.cart)
             </h5>
 
             <button onClick={this.handleCart}>add to cart</button>
+            
               <br/>
           <div>
             <ProductTabs>

@@ -63,6 +63,7 @@ function mdp(dispatch) {
   return { 
     fetchAllProducts: () => dispatch(fetchAllProducts()),
   
+ 
   }
 }
 export default connect(msp, mdp)(SkinCareContainer);

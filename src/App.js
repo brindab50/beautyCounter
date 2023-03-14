@@ -46,10 +46,13 @@ import WhoWeAre from './component/WhoWeAre';
 import EyeCare from './component/EyeCare';
 import Moisturizer from './component/Moisturizer';
 import Masks from './component/Masks';
+// import Commerce from '@chec/commerce.js';
+
 
 
 function App() {
   
+  // const commerce = new Commerce('{pk_51005f86a6434186fe70383a36fbf72c06c8b65124d05}');
 
 
     return (
@@ -74,7 +77,7 @@ function App() {
           <Route path='/WhoWeAre' render={() => <WhoWeAre />} />
           <Route path='/moisturizers' render={() => <Moisturizer />} />
           <Route path='/eyecare' render={() => <EyeCare />} />
-          <Route path='/masks' render={() => <Masks />} />
+          <Route path='/masks' render={() => <Masks />} /> 
 
           <Route exact path='/collections/skincare' render={() => <SkinCareContainer />} />
           <Route path='/collections/skincare/:productId' render={(props) => <ProductPageContainer {...props}     />} />

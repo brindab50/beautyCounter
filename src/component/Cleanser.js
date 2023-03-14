@@ -27,9 +27,9 @@ class Cleanser extends React.Component{
             <div>
 
               <div className='scc-product'>
-        <div className='product-show-page'>
-        {cleansers.map(product=>
-          <ProductCard key={product.id} product={product} />)}
+              <div className='product-show-page'>
+                {cleansers.map(product=>
+                <ProductCard key={product.id} product={product} />)}
           <br/>
         </div>
         
